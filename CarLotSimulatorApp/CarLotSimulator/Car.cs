@@ -10,20 +10,30 @@ namespace CarLotSimulator
     {
         // Constructors
         public Car() // default constructor
-        { } // a special member method that has the same name as its class
+        {
+            CarLot.IncrementCounter();
+        } // a special member method that has the same name as its class
         //public Car()
         //{
             
         //}
-        public Car(string make, string model, int year, string engineNoise, string honkNoise, bool isDriveable)
+        public Car(string make, 
+            string model, 
+            int year, 
+            string engineNoise, 
+            string honkNoise, 
+            bool isDriveable)
         {
             Make = make;
             Model = model; 
             Year = year;
+            EngineNoise = engineNoise;
+            HonkNoise = honkNoise;
+            IsDriveable = isDriveable;
         }
         // fields
         //Properties
-        public int Year { get; set; }
+        public int? Year { get; set; }
 
         public string Make { get; set; }
         public string Model { get; set; }
